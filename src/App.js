@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Board from "./components/Board";
+import initializeDeck from "./Deck";
 
 function App() {
   const [cards, setCards] = useState([]);
   const [flipped, setFlipped] = useState([]);
+
+  useEffect(() => {
+    setCards(initializeDeck());
+  }, []);
+
   const handleClick = id => setFlipped([...flipped, id]);
 
   return (
