@@ -3,7 +3,7 @@ import Card from "./components/Card";
 
 function App() {
   const [flipped, setFlipped] = useState([]);
-  const handleClick = id => setFlipped(id);
+  const handleClick = id => setFlipped([...flipped, id]);
 
   return (
     <div>
@@ -13,8 +13,8 @@ function App() {
         id={1}
         width={100}
         height={100}
-        back={`/img/back.png`}
-        front={`/img/react.png`}
+        front={`/img/Aoi.png`}
+        back={`/img/back.jpg`}
         flipped={flipped.includes(1)}
         handleClick={() => handleClick(1)}
       />
