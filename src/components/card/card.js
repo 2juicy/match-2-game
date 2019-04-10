@@ -22,6 +22,7 @@ export default function Card({
           style={{ height, width }}
           className={flipped ? "front" : "back"}
           src={flipped ? front : back}
+          alt="Card"
         />
       </div>
     </div>

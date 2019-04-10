@@ -7,8 +7,8 @@ function App() {
 
   return (
     <div>
-      <h1>Memory Game</h1>
-      <h2>Can you remember where the cards are?</h2>
+      <h1>Danganronpa Memory Game</h1>
+      <h2>Find the matching cards</h2>
       <Card
         id={1}
         width={100}
