@@ -2,15 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./Card.css";
 
-export default function Card({
-  handleClick,
-  id,
-  flipped,
-  back,
-  front,
-  height,
-  width
-}) {
+function Card({ handleClick, id, flipped, back, front, height, width }) {
   return (
     <div
       className={`flip-container ${flipped ? "flipped" : ""}`}
@@ -38,3 +30,5 @@ Card.propTypes = {
   height: PropTypes.number.isRequired,
   width: PropTypes.number.isRequired
 };
+
+export default Card;
