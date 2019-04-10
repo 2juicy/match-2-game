@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Card from "./components/card";
+import Card from "./components/Card";
 
 class App extends Component {
   render() {
@@ -7,7 +7,7 @@ class App extends Component {
       <div>
         <h1>Memory Game</h1>
         <h2>Can you remember where the cards are?</h2>
-        <Card
+        {/* <Card
           id={1}
           width={100}
           height={100}
@@ -15,7 +15,7 @@ class App extends Component {
           front={`/img/react.png`}
           flipped={flipped.includes(1)}
           handleClick={() => handleClick(1)}
-        />
+        /> */}
       </div>
     );
   }
