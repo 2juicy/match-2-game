@@ -5,7 +5,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-color: #1e1e1e;
+  background-color: #16161d;
   color: #e7e7e7;
   margin: 0 auto;
   padding: 1em 2em;
@@ -14,8 +14,7 @@ body {
 }
 
 h1,
-h2,
-h3 {
+h2 {
   margin: 0.4em 0;
   line-height: 1.2;
 }
@@ -35,43 +34,4 @@ h1 {
 h2 {
   font-size: 1.5em;
   color: #c586c0;
-}
-
-h3 {
-  font-size: 1.1em;
-  margin: 2em 0 1em;
-  font-weight: 100;
-  color: #9cdcfe;
-}
-
-h4 {
-  font-size: 0.9em;
-  margin: 2em 0 0.5em;
-  color: #caecb7;
-}
-
-p {
-  margin: 1.5em 0;
-  line-height: 1.4;
-  letter-spacing: -0.05em;
-  text-align: justify;
-}
-
-a {
-  color: #ff9df7;
-}
-
-ul {
-  margin: 1em 2em;
-  padding: 0;
-}
-
-ul li {
-  margin: 0;
-  padding: 0.125em 0;
-  color: rgb(224, 242, 255);
-}
-
-ul li ul {
-  margin: 0.25em 1.25em;
 }

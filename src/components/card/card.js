@@ -5,9 +5,8 @@ import "./Card.css";
 export default function Card({
   handleClick,
   id,
+  type,
   flipped,
-  back,
-  front,
   height,
   width
 }) {
@@ -21,7 +20,7 @@ export default function Card({
         <img
           style={{ height, width }}
           className={flipped ? "front" : "back"}
-          src={flipped ? front : back}
+          src={flipped ? `img/${type}.png` : `img/back.jpg`}
           alt="Card"
         />
       </div>
@@ -33,8 +32,7 @@ Card.propTypes = {
   handleClick: PropTypes.func.isRequired,
   id: PropTypes.number.isRequired,
   flipped: PropTypes.bool.isRequired,
-  back: PropTypes.string.isRequired,
-  front: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
   height: PropTypes.number.isRequired,
   width: PropTypes.number.isRequired
 };
