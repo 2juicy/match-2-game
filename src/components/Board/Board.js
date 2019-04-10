@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Card from "../Card";
 
-function Board({ cards, flipped, handleClick }) {
+export default function Board({ cards, flipped, handleClick }) {
   return (
     <div className="board">
       {cards.map(card => (
@@ -25,5 +25,3 @@ Board.propTypes = {
   flipped: PropTypes.arrayOf(PropTypes.numbers).isRequired,
   handleClick: PropTypes.func.isRequired
 };
-
-export default Board;

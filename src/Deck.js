@@ -1,3 +1,10 @@
+function shuffleCards(array) {
+  const _array = array.sort(function(a, b) {
+    return 0.5 - Math.random();
+  });
+  return _array;
+}
+
 export default function initializeDeck() {
   let id = 0;
   const cards = [
@@ -20,5 +27,5 @@ export default function initializeDeck() {
     });
     return acc;
   }, []);
-  return cards;
+  return shuffleCards(cards);
 }
