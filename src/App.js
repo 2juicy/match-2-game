@@ -13,8 +13,8 @@ function App() {
         id={1}
         width={100}
         height={100}
-        front={`/img/Aoi.png`}
-        back={`/img/back.jpg`}
+        front={`img/Aoi.png`}
+        back={`img/back.jpg`}
         flipped={flipped.includes(1)}
         handleClick={() => handleClick(1)}
       />
