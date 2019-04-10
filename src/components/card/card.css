@@ -3,6 +3,8 @@
   display: inline-block;
   border: 1px solid white;
   background: black;
+  width: 150px;
+  height: 150px;
 }
 
 .flip-container.flipped .flipper {
@@ -13,6 +15,11 @@
   transition: 0.6s;
   transform-style: preserve-3d;
   position: relative;
+}
+
+.flipper img {
+  width: 150px;
+  height: 150px;
 }
 
 .front .back {

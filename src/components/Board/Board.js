@@ -11,8 +11,6 @@ export default function Board({ cards, flipped, handleClick }) {
           key={card.id}
           id={card.id}
           type={card.type}
-          width={150}
-          height={150}
           flipped={flipped.includes(card.id)}
           handleClick={() => handleClick(card.id)}
         />
