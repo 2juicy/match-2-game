@@ -16,14 +16,14 @@ export default function initializeDeck() {
     "Maizono",
     "Makoto",
     "Toko"
-  ].reduce((acc, type) => {
+  ].reduce((acc, name) => {
     acc.push({
       id: id++,
-      type
+      name
     });
     acc.push({
       id: id++,
-      type
+      name
     });
     return acc;
   }, []);
