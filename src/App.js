@@ -24,12 +24,12 @@ export default function App() {
   });
 
   const handleClick = id => {
+    if (flipped.includes(id)) return;
     setDisabled(true);
     if (flipped.length === 0) {
       setFlipped([id]);
       setDisabled(false);
     } else {
-      if (sameCardClicked(id)) return;
       setFlipped([flipped[0], id]);
       if (isMatch(id)) {
         setSolved([...solved, flipped[0], id]);
@@ -51,7 +51,7 @@ export default function App() {
     setFlipped([]);
     setDisabled(false);
   };
-  const sameCardClicked = id => flipped.includes(id);
+  // const sameCardClicked = id => flipped.includes(id);
   const isMatch = id => {
     const clickedCard = cards.find(card => card.id === id);
     const flippedCard = cards.find(card => flipped[0] === card.id);
