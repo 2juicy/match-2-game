@@ -4,6 +4,7 @@ import "./Card.css";
 
 export default function Card({
   handleClick,
+  disabled,
   id,
   name,
   flipped,
@@ -14,7 +15,7 @@ export default function Card({
     <div
       className={`flip-container ${flipped ? "flipped" : ""}`}
       style={{ width, height }}
-      onClick={() => handleClick(id)}
+      onClick={() => (disabled ? null : handleClick(id))}
     >
       <div className="flipper">
         <img
@@ -30,6 +31,7 @@ export default function Card({
 
 Card.propTypes = {
   handleClick: PropTypes.func.isRequired,
+  disabled: PropTypes.bool.isRequired,
   id: PropTypes.number.isRequired,
   flipped: PropTypes.bool.isRequired,
   name: PropTypes.string.isRequired,

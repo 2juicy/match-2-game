@@ -20,6 +20,7 @@ export default function App() {
   });
 
   const handleClick = id => {
+    setDisabled(true);
     setFlipped([...flipped, id]);
   };
 
