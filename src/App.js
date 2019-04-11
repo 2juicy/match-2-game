@@ -35,7 +35,7 @@ export default function App() {
         setSolved([...solved, flipped[0], id]);
         resetCards();
       } else {
-        setTimeout(resetCards, 2000);
+        setTimeout(resetCards, 1500);
       }
     }
   };
@@ -70,7 +70,6 @@ export default function App() {
     <div>
       <h1>Danganronpa Memory Game</h1>
       <h2>Find the matching pairs</h2>
-
       <Board
         dimension={dimension}
         cards={cards}
@@ -79,6 +78,14 @@ export default function App() {
         disabled={disabled}
         solved={solved}
       />
+
+      <a
+        href="https://github.com/2juicy/match-2-game"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Source
+      </a>
     </div>
   );
 }
