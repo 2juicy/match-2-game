@@ -48,10 +48,18 @@ export default function App() {
   };
 
   const resetCards = () => {
+    if (solved.length === 14) {
+      setTimeout(function() {
+        setSolved([]);
+        setTimeout(function() {
+          setCards(initializeDeck());
+        }, 600);
+      }, 1500);
+    }
     setFlipped([]);
     setDisabled(false);
   };
-  // const sameCardClicked = id => flipped.includes(id);
+
   const isMatch = id => {
     const clickedCard = cards.find(card => card.id === id);
     const flippedCard = cards.find(card => flipped[0] === card.id);
