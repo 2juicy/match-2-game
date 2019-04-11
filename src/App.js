@@ -19,7 +19,9 @@ export default function App() {
     return () => window.removeEventListener("resize", resizeListener);
   });
 
-  const handleClick = id => setFlipped([...flipped, id]);
+  const handleClick = id => {
+    setFlipped([...flipped, id]);
+  };
 
   const resizeBoard = () => {
     setDimension(
@@ -39,6 +41,7 @@ export default function App() {
         cards={cards}
         flipped={flipped}
         handleClick={handleClick}
+        disabled={disabled}
       />
     </div>
   );
