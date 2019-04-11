@@ -41,10 +41,8 @@ export default function App() {
   };
 
   const preloadImages = () => {
-    console.log(cards.length);
     cards.forEach(card => {
       const src = `img/${card.name}.png`;
-      console.log(src);
       new Image().src = src;
     });
   };
