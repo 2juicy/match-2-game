@@ -7,7 +7,7 @@
 }
 
 .flip-container.flipped .flipper {
-  transform: rotateX(180deg);
+  transform: rotateY(180deg);
 }
 
 .flipper {
@@ -24,7 +24,7 @@
 }
 
 .front {
-  transform: rotate(180deg);
+  transform: rotate(0deg);
 }
 
 .back {
