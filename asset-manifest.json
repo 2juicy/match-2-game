@@ -1,13 +1,13 @@
 {
   "main.css": "/match-2-game/static/css/main.5dbc9af5.chunk.css",
-  "main.js": "/match-2-game/static/js/main.029ac266.chunk.js",
-  "main.js.map": "/match-2-game/static/js/main.029ac266.chunk.js.map",
+  "main.js": "/match-2-game/static/js/main.5a2cef10.chunk.js",
+  "main.js.map": "/match-2-game/static/js/main.5a2cef10.chunk.js.map",
   "runtime~main.js": "/match-2-game/static/js/runtime~main.47765068.js",
   "runtime~main.js.map": "/match-2-game/static/js/runtime~main.47765068.js.map",
   "static/js/2.1b3a0643.chunk.js": "/match-2-game/static/js/2.1b3a0643.chunk.js",
   "static/js/2.1b3a0643.chunk.js.map": "/match-2-game/static/js/2.1b3a0643.chunk.js.map",
   "index.html": "/match-2-game/index.html",
-  "precache-manifest.021f9898f9e480c887f758d9b9547bdc.js": "/match-2-game/precache-manifest.021f9898f9e480c887f758d9b9547bdc.js",
+  "precache-manifest.d40ed8702414a58b9c400378c9763025.js": "/match-2-game/precache-manifest.d40ed8702414a58b9c400378c9763025.js",
   "service-worker.js": "/match-2-game/service-worker.js",
   "static/css/main.5dbc9af5.chunk.css.map": "/match-2-game/static/css/main.5dbc9af5.chunk.css.map"
 }
