@@ -25,12 +25,27 @@ export default function App() {
       setFlipped([id]);
       setDisabled(false);
     } else {
-      if (sameCardClicked(flipped, id)) return;
+      if (sameCardClicked(id)) return;
       setFlipped([flipped[0], id]);
+      if (isMatch(id)) {
+        setSolved([...solved, flipped[0], id]);
+        resetCards();
+      } else {
+        setTimeout(resetCards, 2000);
+      }
     }
   };
 
+  const resetCards = () => {
+    setFlipped([]);
+    setDisabled(false);
+  };
   const sameCardClicked = id => flipped.includes(id);
+  const isMatch = id => {
+    const clickedCard = cards.find(card => card.id === id);
+    const flippedCard = cards.find(card => flipped[0] === card.id);
+    return flippedCard.name === clickedCard.name;
+  };
 
   const resizeBoard = () => {
     setDimension(
