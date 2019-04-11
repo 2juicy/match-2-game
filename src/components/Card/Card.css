@@ -2,9 +2,7 @@
   perspective: 1000px;
   display: inline-block;
   border: 1px solid white;
-  background: black;
-  width: 150px;
-  height: 150px;
+  background-color: black;
 }
 
 .flip-container.flipped .flipper {
@@ -17,6 +15,7 @@
   position: relative;
 }
 
+.flip-container,
 .flipper img {
   width: 150px;
   height: 150px;
