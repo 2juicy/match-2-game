@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/match-2-game/static/js/runtime~main.47765068.js"
   },
   {
-    "revision": "e046f1df9b3739bfd7b7",
-    "url": "/match-2-game/static/js/main.5a2cef10.chunk.js"
+    "revision": "867ceb72e1ed99f88784",
+    "url": "/match-2-game/static/js/main.3e00c7fe.chunk.js"
   },
   {
     "revision": "10bf244ca692441702db",
     "url": "/match-2-game/static/js/2.1b3a0643.chunk.js"
   },
   {
-    "revision": "e046f1df9b3739bfd7b7",
+    "revision": "867ceb72e1ed99f88784",
     "url": "/match-2-game/static/css/main.5dbc9af5.chunk.css"
   },
   {
-    "revision": "5c27f49541a0e7c9cade19fa470ab833",
+    "revision": "df0c5844fedc4bd1e042cdb3da7013ed",
     "url": "/match-2-game/index.html"
   }
 ];
