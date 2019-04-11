@@ -8,7 +8,8 @@ export default function Board({
   cards,
   flipped,
   handleClick,
-  disabled
+  disabled,
+  solved
 }) {
   return (
     <div className="board">
@@ -21,7 +22,8 @@ export default function Board({
           height={dimension / 4.5}
           flipped={flipped.includes(card.id)}
           handleClick={handleClick}
-          disabled={disabled}
+          solved={solved.includes(card.id)}
+          disabled={disabled || solved.includes(card.id)}
         />
       ))}
     </div>
@@ -32,6 +34,7 @@ Board.propTypes = {
   dimension: PropTypes.number.isRequired,
   cards: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   flipped: PropTypes.arrayOf(PropTypes.numbers).isRequired,
+  solved: PropTypes.arrayOf(PropTypes.numbers).isRequired,
   handleClick: PropTypes.func.isRequired,
   disabled: PropTypes.bool.isRequired
 };

@@ -5,6 +5,7 @@ import "./Card.css";
 export default function Card({
   handleClick,
   disabled,
+  solved,
   id,
   name,
   flipped,
@@ -21,7 +22,7 @@ export default function Card({
         <img
           className={flipped ? "front" : "back"}
           style={{ width, height }}
-          src={flipped ? `img/${name}.png` : `img/back.jpg`}
+          src={flipped || solved ? `img/${name}.png` : `img/back.jpg`}
           alt="Card"
         />
       </div>
@@ -34,6 +35,7 @@ Card.propTypes = {
   disabled: PropTypes.bool.isRequired,
   id: PropTypes.number.isRequired,
   flipped: PropTypes.bool.isRequired,
+  solved: PropTypes.bool.isRequired,
   name: PropTypes.string.isRequired,
   width: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired
