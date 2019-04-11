@@ -1,5 +1,7 @@
 .board {
-  display: grid;
+  /* display: grid;
   grid-template-columns: auto auto auto auto;
-  justify-content: start;
+  justify-content: start; */
+  margin: 0px;
+  padding: 0px;
 }

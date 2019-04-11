@@ -15,12 +15,6 @@
   position: relative;
 }
 
-.flip-container,
-.flipper img {
-  width: 150px;
-  height: 150px;
-}
-
 .front .back {
   backface-visibility: hidden;
   position: absolute;

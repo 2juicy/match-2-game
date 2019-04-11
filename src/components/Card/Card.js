@@ -2,7 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./Card.css";
 
-export default function Card({ handleClick, id, name, flipped }) {
+export default function Card({
+  handleClick,
+  id,
+  name,
+  flipped,
+  height,
+  width
+}) {
   return (
     <div
       className={`flip-container ${flipped ? "flipped" : ""}`}
@@ -11,6 +18,7 @@ export default function Card({ handleClick, id, name, flipped }) {
       <div className="flipper">
         <img
           className={flipped ? "front" : "back"}
+          style={(height, width)}
           src={flipped ? `img/${name}.png` : `img/back.jpg`}
           alt="Card"
         />

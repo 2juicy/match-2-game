@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Card from "../Card";
 import "./Board.css";
 
-export default function Board({ cards, flipped, handleClick }) {
+export default function Board({ dimension, cards, flipped, handleClick }) {
   return (
     <div className="board">
       {cards.map(card => (
@@ -11,6 +11,8 @@ export default function Board({ cards, flipped, handleClick }) {
           key={card.id}
           id={card.id}
           name={card.name}
+          width={dimension / 4.5}
+          height={dimension / 4.5}
           flipped={flipped.includes(card.id)}
           handleClick={() => handleClick(card.id)}
         />
@@ -20,6 +22,7 @@ export default function Board({ cards, flipped, handleClick }) {
 }
 
 Board.propTypes = {
+  dimension: PropTypes.number.isRequired,
   cards: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   flipped: PropTypes.arrayOf(PropTypes.numbers).isRequired,
   handleClick: PropTypes.func.isRequired
