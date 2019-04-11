@@ -23,6 +23,13 @@ export default function App() {
     return () => window.removeEventListener("resize", resizeListener);
   });
 
+  const preloadImages = () => {
+    cards.forEach(card => {
+      const src = `img/${card.name}.png`;
+      new Image().src = src;
+    });
+  };
+
   const handleClick = id => {
     if (flipped.includes(id)) return;
     setDisabled(true);
@@ -40,30 +47,27 @@ export default function App() {
     }
   };
 
-  const preloadImages = () => {
-    cards.forEach(card => {
-      const src = `img/${card.name}.png`;
-      new Image().src = src;
-    });
-  };
-
-  const resetCards = () => {
-    if (solved.length === 14) {
-      setTimeout(function() {
-        setSolved([]);
-        setTimeout(function() {
-          setCards(initializeDeck());
-        }, 600);
-      }, 1500);
-    }
-    setFlipped([]);
-    setDisabled(false);
-  };
-
   const isMatch = id => {
     const clickedCard = cards.find(card => card.id === id);
     const flippedCard = cards.find(card => flipped[0] === card.id);
     return flippedCard.name === clickedCard.name;
+  };
+
+  const resetCards = () => {
+    setFlipped([]);
+    if (solved.length === 14) {
+      newGame();
+    } else setDisabled(false);
+  };
+
+  const newGame = () => {
+    setTimeout(function() {
+      setSolved([]);
+      setTimeout(function() {
+        setCards(initializeDeck());
+        setDisabled(false);
+      }, 600);
+    }, 1500);
   };
 
   const resizeBoard = () => {
@@ -74,6 +78,7 @@ export default function App() {
       )
     );
   };
+
   return (
     <div>
       <h1>Danganronpa Memory Game</h1>
@@ -86,7 +91,6 @@ export default function App() {
         disabled={disabled}
         solved={solved}
       />
-
       <a
         href="https://github.com/2juicy/match-2-game"
         target="_blank"
