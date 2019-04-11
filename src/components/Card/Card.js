@@ -13,12 +13,13 @@ export default function Card({
   return (
     <div
       className={`flip-container ${flipped ? "flipped" : ""}`}
+      style={{ width, height }}
       onClick={() => handleClick(id)}
     >
       <div className="flipper">
         <img
           className={flipped ? "front" : "back"}
-          style={(height, width)}
+          style={{ width, height }}
           src={flipped ? `img/${name}.png` : `img/back.jpg`}
           alt="Card"
         />
@@ -31,5 +32,7 @@ Card.propTypes = {
   handleClick: PropTypes.func.isRequired,
   id: PropTypes.number.isRequired,
   flipped: PropTypes.bool.isRequired,
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
+  width: PropTypes.number.isRequired,
+  height: PropTypes.number.isRequired
 };
