@@ -67,7 +67,7 @@ export default function App() {
         setCards(initializeDeck());
         setDisabled(false);
       }, 600);
-    }, 1500);
+    }, 2000);
   };
 
   const resizeBoard = () => {
