@@ -14,7 +14,7 @@ export default function Card({
 }) {
   return (
     <div
-      className={`flip-container ${flipped || solved ? "flipped" : ""}`}
+      className={`flip-container ${flipped || solved ? "flipped" : null}`}
       style={{ width, height }}
       onClick={() => (disabled ? null : handleClick(id))}
     >
